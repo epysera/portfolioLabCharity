@@ -48,7 +48,7 @@ public class DataController {
         donationRepository.save(don2);
         Donation don3 = new Donation(3L, 2, "Sienkiewicza 88","Wrocław","71-111", LocalDate.of(2022,06,27), LocalTime.of(9,0,0),"sprzęt do odbioru", List.of(sprzetAGD),wroclaw);
         donationRepository.save(don3);
-        Donation don4 = new Donation(4L, 5, "Mickiewicza 77","Warszawa","22-333", LocalDate.of(2022,06,28), LocalTime.of(9,0,0),"dptacje do odbioru", List.of(sprzetAGD, zabawki),wwa);
+        Donation don4 = new Donation(4L, 5, "Mickiewicza 77","Warszawa","22-333", LocalDate.of(2022,06,28), LocalTime.of(9,0,0),"dotacje do odbioru", List.of(sprzetAGD, zabawki),wwa);
         donationRepository.save(don4);
 
 
