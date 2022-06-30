@@ -14,11 +14,8 @@ public class DonationService {
     }
 
     public Long sumOfBags() {
-        return donationRepository.findAll().stream()
-                .map(donation -> donation.getQuantity())
-                .collect(Collectors.toList())
-                .stream().mapToLong(num -> num.longValue())
-                .sum();
+        return donationRepository.getSumOfBags();
 
     }
+
 }

@@ -1,6 +1,10 @@
 package pl.coderslab.charity.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -12,21 +16,31 @@ public class Donation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Min(1)
+    @Max(10)
+    @NotNull
     private Integer quantity;
+
+    @NotBlank
     private String street;
+
+    @NotBlank
     private String city;
+
+    @NotBlank
     private String zipCode;
+
     private LocalDate pickUpDate;
     private LocalTime pickUpTime;
     private String pickUpComment;
 
     @ManyToMany
-    private List<Category> category = new ArrayList<>();
+    private List<Category> categories = new ArrayList<>();
 
     @ManyToOne
     private Institution institution;
 
-    public Donation(Long id, Integer quantity, String street, String city, String zipCode, LocalDate pickUpDate, LocalTime pickUpTime, String pickUpComment, List<Category> category, Institution institution) {
+    public Donation(Long id, Integer quantity, String street, String city, String zipCode, LocalDate pickUpDate, LocalTime pickUpTime, String pickUpComment, List<Category> categories, Institution institution) {
         this.id = id;
         this.quantity = quantity;
         this.street = street;
@@ -35,7 +49,7 @@ public class Donation {
         this.pickUpDate = pickUpDate;
         this.pickUpTime = pickUpTime;
         this.pickUpComment = pickUpComment;
-        this.category = category;
+        this.categories = categories;
         this.institution = institution;
     }
 
@@ -106,12 +120,12 @@ public class Donation {
         this.pickUpComment = pickUpComment;
     }
 
-    public List<Category> getCategory() {
-        return category;
+    public List<Category> getCategories() {
+        return categories;
     }
 
-    public void setCategory(List<Category> category) {
-        this.category = category;
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 
     public Institution getInstitution() {
