@@ -35,7 +35,7 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/allInstitutions")
+    @GetMapping("/")
     public String showAll(Model model) {
         List<Institution> institutions = institutionRepository.findAll();
         model.addAttribute("institutions", institutions);

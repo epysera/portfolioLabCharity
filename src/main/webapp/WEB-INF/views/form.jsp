@@ -148,62 +148,62 @@
                 </div>
                 <div class="form-group form-group--buttons">
                     <button type="button" class="btn prev-step">Wstecz</button>
-                    <button type="button" class="btn next-step">Dalej</button>
+                    <button type="submit" class="btn">Dalej</button>
                 </div>
             </div>
 
             <!-- STEP 6 -->
-            <div data-step="5">
-                <h3>Podsumowanie Twojej darowizny</h3>
+<%--            <div data-step="5">--%>
+<%--                <h3>Podsumowanie Twojej darowizny</h3>--%>
 
-                <div class="summary">
-                    <div class="form-section">
-                        <h4>Oddajesz:</h4>
-                        <ul>
-                            <li>
-                                <span class="icon icon-bag"></span>
-                                <span class="summary--text">${sumOfBags}
-                                </span>
-                            </li>
+<%--                <div class="summary">--%>
+<%--                    <div class="form-section">--%>
+<%--                        <h4>Oddajesz:</h4>--%>
+<%--                        <ul>--%>
+<%--                            <li>--%>
+<%--                                <span class="icon icon-bag"></span>--%>
+<%--                                <span class="summary--text">${sumOfBags}--%>
+<%--                                </span>--%>
+<%--                            </li>--%>
 
-                            <li>
-                                <span class="icon icon-hand"></span>
-                                <span class="summary--text">${institution.name}
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
+<%--                            <li>--%>
+<%--                                <span class="icon icon-hand"></span>--%>
+<%--                                <span class="summary--text">${institution.name}--%>
+<%--                                </span>--%>
+<%--                            </li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
 
-                    <div class="form-section form-section--columns">
-                        <div class="form-section--column">
-                            <h4>Adres odbioru:</h4>
-                            <ul>
-                                <li${donation.street}></li>
-                                <li${donation.city}></li>
-                                <li${donation.zipCode}></li>
+<%--                    <div class="form-section form-section--columns">--%>
+<%--                        <div class="form-section--column">--%>
+<%--                            <h4>Adres odbioru:</h4>--%>
+<%--                            <ul>--%>
+<%--                                <li${donation.street}></li>--%>
+<%--                                <li${donation.city}></li>--%>
+<%--                                <li${donation.zipCode}></li>--%>
 
-                            </ul>
-                        </div>
+<%--                            </ul>--%>
+<%--                        </div>--%>
 
-                        <div class="form-section--column">
-                            <h4>Termin odbioru:</h4>
-                            <ul>
-                                <li${donation.pickUpDate}>
-                                </li>
-                                <li${donation.pickUpTime}>
-                                </li>
-                                <li${donation.pickUpComment}>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<%--                        <div class="form-section--column">--%>
+<%--                            <h4>Termin odbioru:</h4>--%>
+<%--                            <ul>--%>
+<%--                                <li${donation.pickUpDate}>--%>
+<%--                                </li>--%>
+<%--                                <li${donation.pickUpTime}>--%>
+<%--                                </li>--%>
+<%--                                <li${donation.pickUpComment}>--%>
+<%--                                </li>--%>
+<%--                            </ul>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-                <div class="form-group form-group--buttons">
-                    <button type="button" class="btn prev-step">Wstecz</button>
-                    <button type="submit" class="btn">Potwierdzam</button>
-                </div>
-            </div>
+<%--                <div class="form-group form-group--buttons">--%>
+<%--                    <button type="button" class="btn prev-step">Wstecz</button>--%>
+<%--                    <button type="submit" class="btn">Potwierdzam</button>--%>
+<%--                </div>--%>
+<%--            </div>--%>
         </form:form>
     </div>
 </section>
